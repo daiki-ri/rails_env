@@ -102,10 +102,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["./chef-repo/cookbooks", "./chef-repo/site-cookbooks"]
+    chef.json ={
+        nginx: {
+            env: ["ruby"]
+        }
+    }
     chef.run_list = %w[
         recipe[yum-epel]
         recipe[nginx]
         recipe[ruby-env]
+        recipe[nodejs]
     ]
   end
 
