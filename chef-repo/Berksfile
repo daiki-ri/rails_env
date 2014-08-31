@@ -1,0 +1,11 @@
+###Berksfile
+
+###berkshelf2.x系の場合
+#site :opscode
+
+###berkshelf3.x系の場合
+source "https://api.berkshelf.com"
+
+###共通
+cookbook 'yum-epel'
+cookbook 'nginx', path: './site-cookbooks/nginx'
