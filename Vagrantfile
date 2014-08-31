@@ -105,13 +105,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.json ={
         nginx: {
             env: ["ruby"]
-        }
+        },
+        mysql: {
+            server_root_password: 'rootpass'
+       }
     }
     chef.run_list = %w[
         recipe[yum-epel]
         recipe[nginx]
         recipe[ruby-env]
         recipe[nodejs]
+        recipe[mysql]
     ]
   end
 
