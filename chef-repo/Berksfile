@@ -9,3 +9,4 @@ source "https://api.berkshelf.com"
 ###共通
 cookbook 'yum-epel'
 cookbook 'nginx', path: './site-cookbooks/nginx'
+cookbook 'ruby-env', path: './site-cookbooks/ruby-env'

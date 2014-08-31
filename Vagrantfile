@@ -105,6 +105,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.run_list = %w[
         recipe[yum-epel]
         recipe[nginx]
+        recipe[ruby-env]
     ]
   end
 
