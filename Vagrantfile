@@ -112,10 +112,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     }
     chef.run_list = %w[
         recipe[yum-epel]
+        recipe[tmux]
         recipe[nginx]
         recipe[ruby-env]
         recipe[nodejs]
         recipe[mysql]
+        recipe[dstat]
     ]
   end
 
