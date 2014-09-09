@@ -118,6 +118,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         recipe[nodejs]
         recipe[mysql]
         recipe[dstat]
+        recipe[rails]
     ]
   end
 
